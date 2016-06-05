@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>J. Olson</title>
+
+    <!-- Font -->
+
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP STYLE SHEET -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  
+  <style>
+
+/*NAVBAR CSS*/
+
+    .navbar {
+      font-size: 1.5em;
+      background-color: #FEFBF4;
+    }
+
+    .navbar-brand {
+      font-size: 1.2em;
+      font-family: 'Shadows Into Light Two', cursive;
+    }
+
+    .navbar-nav {
+      font-family: 'Shadows Into Light Two', cursive;
+    }
+
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+      color: #FEFBF4;
+      background-color: #FF987F;
+    }
+
+/*HOME CSS*/
+
+    #topContainer {
+      background-image: url(img/mountainsAltered.jpg);
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .homeHeader {
+      margin-top: 200px;
+      font-size: 8em;
+      color: #FEFBF4;
+      font-family: 'Shadows Into Light Two', cursive;
+    }
+
+    #topRow {
+      margin-top: 50px;
+      text-align: center;
+      color: #FEFBF4;
+    }
+
+    #topRow h2 {
+      font-size: 3 em;
+    }
+
+    #topRow p {
+      margin-top: 50px;
+    }
+
+    #homeGlyph {
+      text-align: center;
+      margin-top: 90px;
+      font-size: 500%;
+      color: #FEFBF4;
+    }
+
+    #homeGlyph a {
+      color: #FEFBF4;
+    }
+
+/*ABOUT CSS*/
+
+    .aboutContainer {
+      background-color: #000000;
+      width: 100%;
+      color: #FEFBF4;
+    }
+
+    #profilePic {
+      width: 200px;
+      margin-top: 200px;
+      border: 10px solid #FF987F;
+    }
+
+    .aboutHeader {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 300%;
+      font-family: 'Shadows Into Light Two', cursive;
+    }
+
+    .aboutPara {
+      margin-top: 50px;
+    }
+
+/*SKILLS CSS*/
+
+    #skillsContainer {
+      background-color: #DDDDDD;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .skillCharts {
+      margin-top: 150px;
+    }
+
+    .skillsHeader h2 {
+      text-align: center;
+      margin-top: 150px;
+      font-size: 300%;
+      font-family: 'Shadows Into Light Two', cursive;
+    }
+
+    .skillsHeader p {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+/* PIE CHART STYLES */
+
+    .chart {
+      position: relative;
+      display: inline-block;
+      width: 200px; /* SHOUL BE EQUAL - Like 200px */
+      height: 200px; /* SHOUL BE EQUAL - Like 200px */
+      margin-top: 30px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .chart canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .percent {
+      display: inline-block;
+      line-height: 200px; /* SHOUL BE EQUAL - Like 200px */
+      z-index: 2;
+      font-size: 2em;
+    }
+
+    .percent:after {
+      content: '%';
+      margin-left: 0.1em;
+      font-size: 1em;
+    }
+
+/*PORTFOLIO CSS*/
+
+    .portfolioHeader {
+      text-align: center;
+      margin-top: 100px;
+      font-size: 300%;
+      color: #FEFBF4;
+      font-family: 'Shadows Into Light Two', cursive;
+    }
+
+    #portfolioContainer {
+      background-color: white;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .carousel-caption h2 {
+      font-family: 'Shadows Into Light Two', cursive;
+      font-size: 500%;
+      text-shadow: 0px 0px 5px black;
+    }
+
+    .carousel-caption p {
+      text-shadow: 0px 0px 5px black;
+    }
+
+ /*CONTACT CSS*/
+
+    #contactContainer {
+      background-color: #DDDDDD;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    .contactIntro h2 {
+      margin-top: 150px;
+      font-size: 300%;
+      font-family: 'Shadows Into Light Two', cursive;
+    }
+    
+    .contactInfo {
+      background-color: white;
+      margin-top: 95px;
+      height: 500px;
+      border-radius: 20px;
+    }
+
+    .contactDetail {
+      height: 260px;
+      border-bottom: 5px solid #FF987F;
+    }
+
+    .contactDetail h2 {
+      padding-top: 85px;
+      font-family: 'Shadows Into Light Two', cursive;
+    }
+
+    .iconsDiv {
+      height: 200px;
+      margin-top: 70px;
+    }
+    
+    .icons {
+      width: 150px;
+    }
+
+  /*Footer*/
+
+  #footer {
+    background-color: #FEFBF4;
+    height: 40px;
+    padding-top: 10px;
+  }
+
+  #footer p {
+    font-size: 1.3em;
+    color: #777;
+  }
+
+  /*MISC*/
+
+    .btn-success {
+      border: 4px solid #FF987F;
+      background: none;
+      font-size: 30px;
+      border-radius: 20px;
+      margin-bottom: 100px;
+      font-family: 'Shadows Into Light Two';
+      box-shadow: 0px 0px 5px #333;
+    }
+
+    .btn-success:hover {
+      background: #FF987F;
+      border: 4px solid #FF987F;
+    }
+
+    .btn-success:focus, .btn-success:active {
+      background: #ff7858;
+      border: 4px solid #FF987F;
+    }
+
+    .btn-success:active:focus {
+      background-color: #ff7858; 
+      border-color: #FF987F;
+    }
+
+  </style>
+    
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar-collapse">
+
+<!-- NAVBAR -->
+   
+  <div class="navbar navbar-default navbar-fixed-top">
+    
+    <div class="container">
+      
+      <div class="navbar-header">
+        
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+
+        </button>
+
+        <a href="" class="navbar-brand">J. OLSON</a>
+      
+      </div>
+
+      <div class="collapse navbar-collapse navbar-right">
+        
+        <ul class="nav navbar-nav">
+          
+          <li><a href="#aboutContainer">About</a></li>
+
+          <li><a href="#skillsContainer">Skills</a></li>
+
+          <li><a href="#portfolioContainer">Portfolio</a></li>
+
+          <li><a href="#contactContainer">Contact</a></li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- HOME SECTION -->
+
+  <div class="container contentContainer" id="topContainer">
+   
+      <div class="row">
+
+        <div class="col-md-6 col-md-offset-3">
+          
+          <h1 class="homeHeader text-center">Here I am..</h1>
+
+        </div>
+        
+        <div class="col-md-6 col-md-offset-3" id="topRow">
+
+          <h2>..simply, an aspiring web and application developer.</h2>
+
+          <br>
+
+          <br>
+
+          <p class="lead">Please use the links above, the link below, or simple scroll to continue.</p>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-2 col-md-offset-5" id="homeGlyph">
+
+        <a href="#aboutContainer"><span class="glyphicon glyphicon-circle-arrow-down" ></span></a>
+
+      </div>
+
+  </div>
+
+<!-- ABOUT SECTION -->
+
+  <div class="container aboutContainer contentContainer" id="aboutContainer">
+
+    <div class="row">
+      
+      <img src="img/aboutPicCrop.jpg" class="img-circle center-block" id="profilePic" alt="Profile Picture">
+
+    </div>
+    
+    <div class="row">
+      
+      <h2 class="aboutHeader">A bit about me...</h2>
+
+      <p class="lead aboutPara col-md-6 col-md-offset-3">I've always been a creative person. From drawing comic book characters in grade school, to drawing real figures on my mobile phone, I've always loved the satisfaction of making something that was never there. A thought, that became reality. Now, I'm taking my creativity to the next level. Everyday since June of 2015, I've been in front of my computer teaching myself (with the help of numerous sites including Treehouse and Udemy of course) numerous languages. My short term goal is to become a full time web developer or mobile application developer, and I'm confident that at this rate, it'll happen soon. ;)</p>
+
+    </div>
+
+  </div>
+
+<!-- SKILLS SECTION -->
+
+  <div class="container skillsContainer contentContainer" id="skillsContainer">
+    
+    <div class="row skillsHeader">
+      
+      <h2>How I rate my current skills with various languages</h2>
+
+      <p class="lead">...and when I mean rate, I really mean my comfort level. I'm currently a work in progress as well :)</p>
+
+    </div>
+
+    <div class="row text-center skillCharts">
+      
+      <div class="col-md-3">
+        <span class="chart" data-percent="75">
+            <span class="percent"></span>
+        </span>
+        <h4>HTML</h4>
+      </div>
+
+      <div class="col-md-3">
+        <span class="chart" data-percent="65">
+            <span class="percent"></span>
+        </span>
+        <h4>CSS </h4>
+      </div>
+
+      <div class="col-md-3">
+        <span class="chart" data-percent="45">
+            <span class="percent"></span>
+        </span>
+        <h4>JavaScript </h4>
+      </div>
+
+      <div class="col-md-3">
+        <span class="chart" data-percent="35">
+            <span class="percent"></span>
+        </span>
+        <h4>JAVA</h4>
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- PORTFOLIO SECTION -->
+
+  <div class="container portfolioContainer contentContainer" id="portfolioContainer">
+    
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      
+      <div class="item active">
+        <img src="img/fog.jpg" alt="Chania">
+        <div class="carousel-caption">
+          <h2>Pictures</h2>
+          <p class="lead">Here is where you will find my digital drawings. All were done on my Note 4 over the past two years.</p>
+          <a href="portfolioPicPage/portfolio.html" role="button" class="btn btn-success btn-large">Click here!</a>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/forest.jpg" alt="Chania">
+        <div class="carousel-caption">
+          <h2>Websites</h2>
+          <p class="lead">Once I have a few under my belt, this is where you will be able to access them all in one convenient location.</p>
+          <a href="#" role="button" class="btn btn-success btn-large">Coming Soon!</a>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/river.jpg" alt="Flower">
+        <div class="carousel-caption">
+          <h2>Mobile Applications</h2>
+          <p class="lead">Links and descriptions to any mobile applications created by myself will be located here.</p>
+          <a href="#" role="button" class="btn btn-success btn-large">Coming Soon!</a>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+  </div>
+
+<!-- CONTACT SECTION -->
+
+  <div class="container contactContainer contentContainer" id="contactContainer">
+    
+    <div class="row">
+
+      <div class="col-md-6 col-md-offset-3 text-center contactIntro">
+        
+        <h2>I'm eager to get my feet wet..</h2>
+
+      </div>
+      
+      <div class="col-md-6 col-md-offset-3 contactInfo text-center">
+
+        <div class="col-md-12 contactDetail">
+        
+          <h2>..so please reach me by one of the methods below.</h2>
+
+        </div>
+
+        <div class="col-md-12 iconsDiv">
+        
+          <a href="http://facebook.com/pr0pa1n" target="_blank"><img src="img/facebookIcon.png" alt="Facebook Icon"></a>
+
+          <a href="mailto:jro34@live.com" ><img src="img/emailIcon.png" alt="Email Icon"></a>
+
+          <a href="https://www.linkedin.com/in/justinolson34" target="_blank"><img src="img/linkedinIcon.png" alt="LinkedIn Icon"></a>
+
+          <a href="http://twitter.com/intent/tweet?screen_name=8bitjustin" target="_blank"><img src="img/twitterIcon.png" alt="twitter Icon"></a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="footer">
+
+    <div class="container text-center">
+
+      <p class="text-muted">&#169; Justin R. Olson</p>
+  
+    </div>
+
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+
+      $(".contentContainer").css("min-height",$(window).height());
+
+    </script>
+
+<!-- JQUERY FOR SMOOTH SCROLL -->
+    <script>
+
+    $('a[href*=#]:not([href=#myCarousel])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+            || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+               if (target.length) {
+                 $('html,body').animate({
+                     scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+
+    </script>
+
+<!-- JQUERY FOR SKILL CHART -->
+    <script src="assets/js/bootstrap.js"></script>
+<!-- REQUIRED SKILL CHART SCRIPTS -->
+    <script src="assets/js/jquery.easypiechart.min.js"></script>
+<!-- CUSTOM SCRIPTS -->
+    <script>
+        $(function () {
+            $('.chart').easyPieChart({
+                easing: 'easeOutBounce',
+                onStep: function (from, to, percent) {
+                    $(this.el).find('.percent').text(Math.round(percent));
+                },
+                barColor: '#FF987F', //FORCOLOR OF CHART
+                lineWidth: 10, //WIDTH OF STRIP OF SKILL CHART
+                size: 200, //WIDTH - HEIGHT OF SKILL CHART(SHOULD BE IN SQUARE) -  SHOUL BE EQUAL - Like 200px 
+            });
+
+        });
+    </script>
+
+  </body>
+</html>
